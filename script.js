@@ -13,7 +13,7 @@ function carregarPagina(pagina) {
 }
 
 function carregarImagem(nomeImagem) {
-  const caminho = 'imagens/' + nomeImagem;
+  const caminho = 'conteudos/imagens/' + nomeImagem;
 
   fetch(caminho)
     .then(response => {
