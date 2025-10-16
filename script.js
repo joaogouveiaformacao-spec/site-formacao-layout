@@ -18,10 +18,10 @@ function carregarImagem(nomeImagem) {
   fetch(caminho)
     .then(response => {
       if (!response.ok) throw new Error('Imagem não encontrada.');
-      document.getElementById('conteudo').src = caminho;
+      document.getElementById('imagem').src = caminho;
     })
     .catch(error => {
-      document.getElementById('conteudo').src = '';
-      document.getElementById('conteudo').innerHTML = "<p>Não foi possível carregar a imagem.</p>";
+      document.getElementById('imagem').src = '';
+      document.getElementById('imagem').innerHTML = "<p>Não foi possível carregar a imagem.</p>";
     });
 }
