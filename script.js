@@ -13,15 +13,15 @@ function carregarPagina(pagina) {
 }
 
 function carregarImagem(nomeImagem) {
-  const caminho = 'conteudos/imagens/' + nomeImagem;
+  const caminho = 'conteudos/' + nomeImagem;
 
   fetch(caminho)
     .then(response => {
       if (!response.ok) throw new Error('Imagem não encontrada.');
-      document.getElementById('imagem').src = caminho;
+      document.getElementById('conteudo').src = caminho;
     })
     .catch(error => {
-      document.getElementById('imagem').src = '';
+      document.getElementById('conteudo').src = '';
       document.getElementById('conteudo').innerHTML = "<p>Não foi possível carregar a imagem.</p>";
     });
 }
